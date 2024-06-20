@@ -27,6 +27,10 @@ public class ATM {
             }
         }
     }
+
+    public static void deposit(){
+        Scanner sc = new Scanner(System.in);
+    }
     public static void main(String [] args){
       
     }
