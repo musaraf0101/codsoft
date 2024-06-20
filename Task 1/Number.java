@@ -17,6 +17,10 @@ public class Number {
 
         else{
             System.out.println("Better Luck Next Time");
+            System.out.println("System Genarate Number"+" "+number);
+            System.out.println("User Input Number"+" "+UserNumber);
         }
+
+        sc.close();
     }
 }
