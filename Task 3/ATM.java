@@ -49,7 +49,24 @@ public class ATM {
       System.out.println("2. Withdraw");
       System.out.println("3. Deposit");
       System.out.println("4. Exit");
-      
+
+      int num = sc.nextInt();
+      switch(num){
+        case 1: balance();
+        break;
+
+        case 2 : withdraw();
+        break;
+
+        case 3: deposit();
+        break;
+
+        case 4: System.exit(num);
+        break;
+
+        default:
+        System.out.println("Invalid choice");
+      }
       sc.close();
     }
 }
