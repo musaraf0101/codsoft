@@ -43,6 +43,13 @@ public class ATM {
         sc.close();
     }
     public static void main(String [] args){
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Welcome to ATM");
+      System.out.println("1. Check Balance");
+      System.out.println("2. Withdraw");
+      System.out.println("3. Deposit");
+      System.out.println("4. Exit");
       
+      sc.close();
     }
 }
