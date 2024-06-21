@@ -11,6 +11,8 @@ public class ATM {
         }
         else{
             System.out.println("Incorrect password");
+            System.out.println("====================================");
+            dashbord();
         }
         sc.close();
     }
@@ -22,10 +24,12 @@ public class ATM {
             System.out.println("Enter the amount you want to withdraw: ");
             double amount = sc.nextDouble();
             if(Account_balance>0&&Account_balance>=amount){
-                System.out.println("Your Withdraw Amount" +amount +"Succes!!");
+                System.out.println("Your Withdraw Amount" +" : "+amount +" Succes!!");
             }
             else{
                 System.out.println("Insufficient balance");
+                System.out.println("================================");
+                dashbord();
             }
         }
         sc.close();
@@ -39,11 +43,18 @@ public class ATM {
             System.out.println("Enter your Deposit Amount");
             double amount = sc.nextDouble();
             Account_balance = Account_balance + amount;
+            System.out.println("Your Deposit Amount" +" : "+amount+" "+"Success!!");
+        }
+        else{
+            System.out.println("Password incorrect");
+            System.out.println("====================================");
+            dashbord();
         }
         sc.close();
     }
-    public static void main(String [] args){
-      Scanner sc = new Scanner(System.in);
+    
+    public static void dashbord(){
+        Scanner sc = new Scanner(System.in);
       System.out.println("Welcome to ATM");
       System.out.println("1. Check Balance");
       System.out.println("2. Withdraw");
@@ -66,7 +77,11 @@ public class ATM {
 
         default:
         System.out.println("Invalid choice");
+        dashbord();
       }
       sc.close();
+    }
+    public static void main(String [] args){
+      dashbord();
     }
 }
