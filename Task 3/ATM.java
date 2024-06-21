@@ -12,6 +12,7 @@ public class ATM {
         else{
             System.out.println("Incorrect password");
         }
+        sc.close();
     }
     public static void withdraw(){
         Scanner sc = new Scanner(System.in);
@@ -19,9 +20,9 @@ public class ATM {
         int pass = sc.nextInt();
         if(password == pass){
             System.out.println("Enter the amount you want to withdraw: ");
-            double amount;
-            if(Account_balance>0&&Account_balance>amount){
-                amount = sc.nextDouble();
+            double amount = sc.nextDouble();
+            if(Account_balance>0&&Account_balance>=amount){
+                System.out.println("Your Withdraw Amount" +amount +"Succes!!");
             }
             else{
                 System.out.println("Insufficient balance");
@@ -40,10 +41,6 @@ public class ATM {
             Account_balance = Account_balance + amount;
         }
         sc.close();
-    }
-
-    public static void front(){
-
     }
     public static void main(String [] args){
       
